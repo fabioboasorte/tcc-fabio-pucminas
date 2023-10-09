@@ -1,0 +1,194 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2023-10-05T12:19:45.326Z",
+    "__export_source": "insomnia.desktop.app:v8.2.0",
+    "resources": [
+        {
+            "_id": "req_b85c870c780a49c5b067a6adebc7a4a8",
+            "parentId": "wrk_scratchpad",
+            "modified": 1696501016436,
+            "created": 1694033011048,
+            "url": "http://18.223.33.170:3000/projects/delete/64f8e08ded2c157318195843",
+            "name": "delete",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694033011048,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_scratchpad",
+            "parentId": null,
+            "modified": 1696498259821,
+            "created": 1696498259821,
+            "name": "Scratch Pad",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_91556600abbc4144b3b8af9a2ca07b50",
+            "parentId": "wrk_scratchpad",
+            "modified": 1696506778174,
+            "created": 1694032946524,
+            "url": "http://18.223.33.170:3000/projects/edit/64f8e4abb614d07705e7cfa0",
+            "name": "edit",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Projeto Cozinha Escola no Rio de Janeiro\",\n\t\"description\": \"Our 'Cozinha Escola' project in Rio de Janeiro is dedicated to providing culinary education to the local community. We aim to empower individuals with culinary skills that can enhance their employability and open doors to a wide range of culinary career options. Join us in making culinary dreams come true!\",\n\t\"region\": \"RJ\",\n\t\"imagem\": \"https://i.pinimg.com/originals/bd/f3/52/bdf35271740d5f7ccc7bc8440f548397.jpg\",\n\t\"goal\": 75000,\n\t\"goalAchieved\": 18000,\n\t\"votes\": 101\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694032946524,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_985c87d83e7648a8b46cacbd02db0478",
+            "parentId": "wrk_scratchpad",
+            "modified": 1696501002989,
+            "created": 1694032627162,
+            "url": "http://18.223.33.170:3000/projects/findById/64f8e4abb614d07705e7cfa0",
+            "name": "find by id",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694032627162,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_394907924557459bb0713dd1e9596901",
+            "parentId": "wrk_scratchpad",
+            "modified": 1696501472711,
+            "created": 1694031810747,
+            "url": "http://18.223.33.170:3000/projects/add",
+            "name": "add",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Projeto Cozinha Escola no Rio de Janeiro\",\n\t\"description\": \"Our 'Cozinha Escola' project in Rio de Janeiro is dedicated to providing culinary education to the local community. We aim to empower individuals with culinary skills that can enhance their employability and open doors to a wide range of culinary career options. Join us in making culinary dreams come true!\",\n\t\"region\": \"RJ\",\n\t\"imagem\": \"https://i.pinimg.com/originals/bd/f3/52/bdf35271740d5f7ccc7bc8440f548397.jpg\",\n\t\"goal\": 15000,\n\t\"goalAchieved\": 8000,\n\t\"votes\": 100\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694031810747,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_26095f2b9a874ecc9b4bc11f49396dda",
+            "parentId": "wrk_scratchpad",
+            "modified": 1696500981566,
+            "created": 1694031774228,
+            "url": "http://18.223.33.170:3000/projects",
+            "name": "list all",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694031774229,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_99d30891da4bdcebc63947a8fc17f076de878684",
+            "parentId": "wrk_scratchpad",
+            "modified": 1696500889421,
+            "created": 1696500889421,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": null,
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1696500889421,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_99d30891da4bdcebc63947a8fc17f076de878684",
+            "parentId": "wrk_scratchpad",
+            "modified": 1696500889424,
+            "created": 1696500889424,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        }
+    ]
+}
