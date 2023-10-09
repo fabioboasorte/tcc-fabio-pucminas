@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<ng-container *ngIf="projectId|async as id">
+  <div *ngIf="id != 'null'; else lista">
+    <app-project-details id="{{id}}"></app-project-details>
+  </div>
+
+  <ng-template #lista>
+    <app-projects-list></app-projects-list>
+  </ng-template>
+</ng-container>
+

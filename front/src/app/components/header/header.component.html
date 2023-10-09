@@ -1,0 +1,32 @@
+<header>
+  <div class="header-menu" [ngClass]="{'open': isMenuOpen}">
+    <div class="menu-icon" (click)="toggleMenu()"></div>
+    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="logo">
+      <img src="../../../assets/logo.svg" />
+    </a>
+    <div class="user-avatar">F</div>
+  </div>
+
+  <nav class="menu" [ngClass]="{'open': isMenuOpen}">
+    <ul>
+      <li class="menu-item active">
+        <a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">Ver projetos</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">Eventos</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">Crie seu projeto</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">Adicionar um evento</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">Seus dados</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Logoff</a>
+      </li>
+    </ul>
+  </nav>
+</header>

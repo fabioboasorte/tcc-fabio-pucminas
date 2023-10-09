@@ -1,0 +1,44 @@
+<ul class="o-layout o-layout--xs">
+  <li *ngFor="let item of project$|async; let index = index" class="o-layout__item" [ngClass]="index > 0 && index <= 2 ? '_6/12' : '_1/1'">
+    <ng-container *ngIf="index == 0 ">
+      <div class="spotlight" style="background-image:url('{{item.imagem}}')">
+        <a routerLink="/project/{{ item._id }}" routerLinkActive="active" ariaCurrentWhenActive="page">
+          <div class="title">{{ item.title }}</div>
+
+          <div class="details">
+            <div>
+              <div class="achieved">{{ ((item.goalAchieved * 100) / item.goal).toFixed(2) }}% da meta de financiamento alcançada</div>
+              <div class="votes">{{ item.votes }} votos</div>
+            </div>
+            <button class="support">Apoie esse projeto</button>
+          </div>
+        </a>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="index > 0 && index <= 2">
+      <div class="semiSpotlight" style="background-image:url('{{item.imagem}}')">
+        <a routerLink="/project/{{ item._id }}" routerLinkActive="active" ariaCurrentWhenActive="page">
+          <div class="title">{{ item.title }}</div>
+          <button class="support">Apoie esse projeto</button>
+        </a>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="index > 2 ">
+      <div class="normal">
+        <a routerLink="/project/{{ item._id }}" routerLinkActive="active" ariaCurrentWhenActive="page">
+          <div>
+            <div class="title">{{ item.title }}</div>
+            <div class="arrow">
+              <div>
+                <img src="../../../../assets/icon-arrow-right.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="votes">VOTOS: {{ item.votes }} </div>
+        </a>
+      </div>
+    </ng-container>
+  </li>
+</ul>

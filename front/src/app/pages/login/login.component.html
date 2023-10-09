@@ -1,0 +1,22 @@
+<ng-container>
+  <div>
+    <div class="title">Uma plataforma de colaboração</div>
+    <img class="main-logo" src="../../assets/logo.svg" alt="Cocriando" />
+  </div>
+
+  <div>
+
+    <div class="infos _mtlg">
+      <input class="_mbxxs" type="text" placeholder="Digite seu usuário" value="teste@cocriando.com" />
+      <input class="_mbxxs" type="password" inputmode="text" placeholder="Digite sua senha" />
+      <app-button text="Fazer Login" type="primary" [border]="false" [arrow]="true"
+        (click)="goToProjects()"></app-button>
+    </div>
+
+    <div class="_mbsm"></div>
+
+    <a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <span class="register">Ou você pode se Registrar aqui</span>
+    </a>
+  </div>
+</ng-container>

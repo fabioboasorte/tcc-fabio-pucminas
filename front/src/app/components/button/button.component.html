@@ -1,0 +1,9 @@
+<ng-container *ngIf="route; else noRoute">
+  <a routerLink="{{route}}" routerLinkActive="active" ariaCurrentWhenActive="page">
+    <button class="{{type}}" [ngClass]="{'no-border': !border, 'arrow': arrow}">{{ text }}</button>
+  </a>
+</ng-container>
+
+<ng-template #noRoute>
+  <button class="{{type}}" [ngClass]="{'no-border': !border, 'arrow': arrow}">{{ text }}</button>
+</ng-template>

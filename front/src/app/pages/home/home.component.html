@@ -1,0 +1,17 @@
+<ng-container>
+  <div>
+    <div class="title">Uma plataforma de colaboração</div>
+    <img class="main-logo" src="../../assets/logo.svg" alt="Cocriando" />
+  </div>
+
+  <div>
+    <app-button type="primary" text="Já sou um cocriador" route="/login"></app-button>
+    <div class="_mtxs"></div>
+    <app-button type="secondary" text="Conhecer sem login" route="/projects"></app-button>
+    <div class="_mbsm"></div>
+
+    <a routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <span class="register">Ou você pode se Registrar aqui</span>
+    </a>
+  </div>
+</ng-container>

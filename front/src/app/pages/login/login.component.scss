@@ -1,0 +1,39 @@
+* {
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  padding-top: 82px;
+}
+
+.main-logo {
+  padding-top: 44px;
+  padding-bottom: 0;
+}
+
+.register {
+  color: #FAFF00;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.infos {
+  input {
+    padding: 16px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+
+    &.value {
+      color: #FAFF00;
+
+      &::placeholder {
+        color: #FFF;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+<ng-container *ngIf="projectData as item">
+  <ng-container *ngIf="step === 1; else support">
+    <div class="title details" style="background-image:url('{{item.imagem}}')">
+      <div>{{ item.title }}</div>
+    </div>
+
+    <div class="description _mb" [ngClass]="{'showAll': isDescOpen}">
+      <div>
+        {{ item.description }}
+        <div class="readLess" (click)="openDescription()">Esconder descrição</div>
+      </div>
+      <div class="readMore" (click)="openDescription()">
+        {{ isDescOpen ? '' : 'Ver todo o descritivo do projeto' }}
+      </div>
+    </div>
+
+    <app-button text="Apoie esse projeto" type="primary" [border]="false" [arrow]="true"
+      (click)="changeView(2)"></app-button>
+
+
+    <div class="goal _mt">
+      <div class="goal--bar"
+        [ngClass]="{'complete': (item.goalAchieved * 100) / item.goal == 100, 'initialized': (item.goalAchieved * 100) / item.goal > 0}">
+        <progress max="100" [value]="(item.goalAchieved * 100) / item.goal"></progress>
+      </div>
+
+      <div class="_df _jcsb">
+        <span class="goal--achieved">
+          {{ ((item.goalAchieved * 100) / item.goal).toFixed(2) }}% da meta de
+          <br>
+          financiamento alcançada
+        </span>
+
+        <span class="goal--total">
+          Meta:
+          <br>
+          {{ formatCurrency(item.goal) }}
+        </span>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="collaborators">
+      <span class="collaborators--title">Votos que este projeto recebeu:</span>
+      <div class="collaborators--votes">
+        <div class="collaborators--votes__total">{{ item.votes }}</div>
+        <div class="collaborators--votes__plus" (click)="vote('plus')">+</div>
+        <div class="collaborators--votes__minus" (click)="vote('minus')">-</div>
+        <div class="collaborators--votes__coments">Ler e deixar comentários</div>
+      </div>
+      <span class="collaborators--all">Conheça os 1.245 CoCriadores que apoiam este projeto</span>
+    </div>
+  </ng-container>
+
+  <ng-template #support>
+    <div class="title support" style="background-image:url('{{item.imagem}}')">
+      <div>{{ item.title }}</div>
+    </div>
+
+    <ng-container *ngIf="step === 2; else pix">
+      <div class="infos _mtlg">
+        <input class="_mbxxs" type="text" placeholder="Digite seu nome" value="Fabio Ribeiro">
+        <input class="_mbxxs" type="text" inputmode="numeric" placeholder="Digite seu CPF" maxlength="14"
+          [(ngModel)]="userCPF" (input)="formatCPF()">
+        <input class="_mbxxs value" type="text" inputmode="numeric" placeholder="Digite o valor de doação"
+          [(ngModel)]="donationValue" (input)="formatCurrency()">
+        <app-button text="Gerar QR Code PIX" type="primary" [border]="false" [arrow]="true"
+          (click)="changeView(3)"></app-button>
+      </div>
+
+      <hr class="support">
+
+      <div class="footer">
+        <p class="footer--goals">
+          Este projeto alcançou <span>{{ ((item.goalAchieved * 100) / item.goal).toFixed(2) }}% da meta</span> até aqui
+          <br>
+          e também recebeu <span>{{ item.votes }} votos</span>
+        </p>
+
+        <p class="footer--collaborators">Conheça os 1.245 CoCriadores que apoiam este projeto</p>
+
+        <div class="_df _jcsa _mt">
+          <img src="../../../../assets/badge-ambiente-seguro.svg">
+          <img src="../../../../assets/badge-pag-seguro.svg">
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #pix>
+      <div class="qrCode">
+        <img src="../../../../assets/QR.svg">
+      </div>
+
+      <hr class="support">
+
+      <div class="_df _jcsa _mt">
+        <img src="../../../../assets/badge-ambiente-seguro.svg">
+        <img src="../../../../assets/badge-pag-seguro.svg">
+      </div>
+    </ng-template>
+
+  </ng-template>
+</ng-container>
