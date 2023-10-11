@@ -5,7 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProjectsModule } from './modules/projects/projects.module';
 // import { UsersModule } from './modules/users/users.module';
-import { EventsModule } from './modules/events/events.module';
+// import { EventsModule } from './modules/events/events.module';
 
 @Module({
   imports: [
@@ -13,7 +13,7 @@ import { EventsModule } from './modules/events/events.module';
     MongooseModule.forRoot(process.env.DATABASE_HOST),
     ProjectsModule,
     // UsersModule,
-    EventsModule,
+    // EventsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

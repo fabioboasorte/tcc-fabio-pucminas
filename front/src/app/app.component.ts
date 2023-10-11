@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.innerWidth = window.innerWidth;
-    if (this.innerWidth > 598 &&
+    if (!this.isMobileDevice() &&
       this.innerWidth != this.oldInnerWidth) {
       this.router.navigate(['notice']);
       this.oldInnerWidth = window.innerWidth;
@@ -35,5 +35,9 @@ export class AppComponent implements OnInit {
         this.router.navigate(['']);
       }
     }
+  }
+
+  isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
   }
 }
